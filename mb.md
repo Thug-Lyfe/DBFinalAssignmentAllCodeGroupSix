@@ -1,4 +1,5 @@
 
+### Data extraction
 As we now knew how we wanted the data to be modeled, it was time to extract the data.  
 We used two js files, one for the main extraction and one for small changes we found out later needed to made.  
 Such as unique ids cross nodes in neo4j. We used js to make use of easy multithreading and async functions.
@@ -124,6 +125,7 @@ process.on('message', async (content) => {
     process.send({ city_list: list })
 })
 ```
+### Table creation and Data importing
 With the multithreading this still took around 10-11 hours but after it was done we could start importing the data.  
 As we allready knew how we wanted to model the data we could make the following table creations:  
 #### MongoDB
