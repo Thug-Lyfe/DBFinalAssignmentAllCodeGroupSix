@@ -1,6 +1,8 @@
 
 As we now knew how we wanted the data to be modeled, it was time to extract the data.
+
 We used two js files, one for the main extraction and one for small changes we found out later needed to made.
+
 Such as unique ids cross nodes in neo4j. We used js to make use of easy multithreading and async functions.
 
 The code for the reader can be found here: https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/blob/master/GutenBurgReader/reader_v2.js 
@@ -31,6 +33,7 @@ if (filename.indexOf("G-") == 0) {
 ```
 3. The rest gets the same treatment:
 The function below, takes the id of a file, finds the meta data file from the cache folder and extracts the meta data.
+
 If succesful it will follow the chain succesFunc_meta -> cpQ
 ```Javascript
 fs.readFile("cache/epub/" + id + "/pg" + id + ".rdf", 'utf-8', function (err, meta_data) {
@@ -68,6 +71,7 @@ fs.readFile("cache/epub/" + id + "/pg" + id + ".rdf", 'utf-8', function (err, me
 5. Append city info to csv/json files
 
 The succesful_meta function appends all the relavant csv/json files with books and authors.
+
 The cpQ function is a two part function with the cp variable being our childpool, a msgqueue for threads.
 
 ```Javascript (childpool)
@@ -75,6 +79,7 @@ const pool = require('fork-pool');
 let cp = new pool('./cityscan.js', null, null, {});
 ```
 the cp gets the whole book (minus the intro and ourtro of the gutenberg project)
+
 the rest of the function is to append to the csv/json files with city information
 ```Javascript (city appender)
 let cpQ = async function (content, book_id, mongo_temp, callback) {
@@ -133,9 +138,11 @@ process.on('message', async (content) => {
 ```
 
 With the multithreading this still took around 10-11 hours but after it was done we could start importing the data.
+
 As we allready knew how we wanted to model the data we could make the following table creations:
 #### MongoDB
 We had three collections for mongo as we thought we had way too many city relations pr. book to not have the data in a seperate collection
+
 We also made the auths collection, even though we never got around to using it, as it was to be an additional feature if the time was found to implement it.
 ```Bash (Mongodb)
 use books
@@ -161,7 +168,15 @@ copy t_city(id,name,latitude,longitude) from '/psql_city.csv' DELIMITER ',' CSV 
 copy t_ment(book_ID,city_ID) from '/psql_mention.csv' DELIMITER ',' CSV HEADER;
 ```
 #### Neo4J
-Here we first need to stop the service, delete the graph.db import a new graph.db and start it up again
+The two other dbs do not require any header, (the psql one directly ignores it in our case). But the Neo4J has some specific requirements to the header:
+
+relation csv has to be: :START_ID,:END_ID
+
+While node csv has to be node_id:ID,filename,authID,name,release_date.
+
+(ofc other proteries can thrown in instead of ours, but one of them needs the :ID tag for it to work)
+
+From here we first need to stop the service, delete the graph.db import a new graph.db and start it up again
 ```Bash
 neo4j stop
 rm -rf data/databases/graph.db
