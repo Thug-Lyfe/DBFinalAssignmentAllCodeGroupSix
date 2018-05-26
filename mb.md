@@ -16,56 +16,52 @@ The finished csv files can be found here: https://github.com/Thug-Lyfe/DBFinalAs
 ex. of one of the exeptions
 ```Javascript
 if (filename.indexOf("G-") == 0) {
-        title_ind = content.indexOf("\n") + 1
-        title = content.substring(title_ind, content.indexOf("1", title_ind)).replace(/(\r\n\t|\n|\r\t|\*|\r)/gm, "");
-        auth = "unknown";
-        release = "unknown";
-        id = filename
-        successFunc_meta(id, dirname.substring(6, dirname.length), auth, title, release, (book_id, mongo_temp) => {
-            cpQ(content, book_id, mongo_temp, (res) => {
-                callback(res)
-            })
-        });
-
-    }
+  title_ind = content.indexOf("\n") + 1
+  title = content.substring(title_ind, content.indexOf("1", title_ind)).replace(/(\r\n\t|\n|\r\t|\*|\r)/gm, "");
+  auth = "unknown";
+  release = "unknown";
+  id = filename
+  successFunc_meta(id, dirname.substring(6, dirname.length), auth, title, release, (book_id, mongo_temp) => {
+    cpQ(content, book_id, mongo_temp, (res) => {
+      callback(res)
+    })
+  });
+}
 ```
 3. The rest gets the same treatment:
 The function below, takes the id of a file, finds the meta data file from the cache folder and extracts the meta data.
 If succesful it will follow the chain succesFunc_meta -> cpQ
 ```Javascript
 fs.readFile("cache/epub/" + id + "/pg" + id + ".rdf", 'utf-8', function (err, meta_data) {
-
-            if (meta_data != undefined && meta_data != null) {
-                if (meta_data.indexOf("<dcterms:title>") != -1) {
-                    title = meta_data.substring(meta_data.indexOf("<dcterms:title>") + 15, meta_data.indexOf("</dcterms:title>")).replace(/(\r\n\t|\n|\r\t|\*|\r)/gm, " ");
-                } else {
-                    title = "unknown";
-                }
-                if (meta_data.indexOf("<pgterms:name>") != -1) {
-                    auth = meta_data.substring(meta_data.indexOf("<pgterms:name>") + 14, meta_data.indexOf("</pgterms:name>")).replace(/(\r\n\t|\n|\r\t|\*|\r)/gm, " ");
-                } else {
-                    auth = "unknown";
-                }
-                if (meta_data.indexOf("</dcterms:issued>") != -1) {
-                    release = meta_data.substring(meta_data.indexOf("</dcterms:issued>") - 10, meta_data.indexOf("</dcterms:issued>")).replace(/(\r\n\t|\n|\r\t|\*|\r)/gm, " ");
-                } else {
-                    release = "unknown";
-                }
-            } else {
-                failFunc(filename, "meta_data err: ", id, dirname);
-            }
-            if (title == "unknown") {
-                failFunc(filename, "unknown title: ", id, dirname);
-
-            } else {
-                successFunc_meta(id, dirname.substring(6, dirname.length), auth, title, release, (book_id, mongo_temp) => {
-                    cpQ(content, book_id, mongo_temp, (res) => {
-                        callback(res)
-                    })
-                });
-            }
-        })
-
+  if (meta_data != undefined && meta_data != null) {
+    if (meta_data.indexOf("<dcterms:title>") != -1) {
+      title = meta_data.substring(meta_data.indexOf("<dcterms:title>") + 15, meta_data.indexOf("</dcterms:title>")).replace(/(\r\n\t|\n|\r\t|\*|\r)/gm, " ");
+    } else {
+      title = "unknown";
+    }
+    if (meta_data.indexOf("<pgterms:name>") != -1) {
+      auth = meta_data.substring(meta_data.indexOf("<pgterms:name>") + 14, meta_data.indexOf("</pgterms:name>")).replace(/(\r\n\t|\n|\r\t|\*|\r)/gm, " ");
+    } else {
+      auth = "unknown";
+    }
+    if (meta_data.indexOf("</dcterms:issued>") != -1) {
+      release = meta_data.substring(meta_data.indexOf("</dcterms:issued>") - 10, meta_data.indexOf("</dcterms:issued>")).replace(/(\r\n\t|\n|\r\t|\*|\r)/gm, " ");
+    } else {
+      release = "unknown";
+    }
+  } else {
+    failFunc(filename, "meta_data err: ", id, dirname);
+  }
+  if (title == "unknown") {
+    failFunc(filename, "unknown title: ", id, dirname);
+  } else {
+    successFunc_meta(id, dirname.substring(6, dirname.length), auth, title, release, (book_id, mongo_temp) => {
+      cpQ(content, book_id, mongo_temp, (res) => {
+        callback(res)
+      })
+    });
+  }
+})
 ```
 4. Send book content to childpool for cityscanning
 5. Append city info to csv/json files
@@ -123,7 +119,6 @@ async function scanCities(content) {
             }
         } else {
             if (content.indexOf(" " + city.name + " ") != -1) {
-
                 list.push(index);
             }
         }
@@ -178,5 +173,5 @@ neo4j-admin import \
     --ignore-missing-nodes=true \
     --ignore-duplicate-nodes=true \
     --id-type=STRING
-    neo4j start
+neo4j start
 ```
