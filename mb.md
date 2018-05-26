@@ -13,6 +13,7 @@ The finished csv files can be found here: https://github.com/Thug-Lyfe/DBFinalAs
 
 1. Is to read the files.
 2. Deal with the small amount of files that does not have an id or lacking meta data in cache.
+
 ex. of one of the exeptions
 ```Javascript
 if (filename.indexOf("G-") == 0) {
