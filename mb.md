@@ -1,14 +1,18 @@
 
 As we now knew how we wanted the data to be modeled, it was time to extract the data.
 We used two js files, one for the main extraction and one for small changes we found out later needed to made.
-such as unique ids cross nodes in neo4j. We used js to make use of easy multithreading and async functions.
+Such as unique ids cross nodes in neo4j. We used js to make use of easy multithreading and async functions.
 
-the code for the reader can be found here: https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/blob/master/GutenBurgReader/reader_v2.js 
-the small fixer can be found here: https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/blob/master/GertenBergTheGame/fixer.js
-the city scan thread code can be found here: https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/blob/master/GutenBurgReader/cityscan.js
-the finished csv files can be found here: https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/tree/master/GertenBergTheGame/csvs_backup
-step 1. is to read the files.
-step 2. deal with the small amount of files that does not have an id or lacking meta data in cache.
+The code for the reader can be found here: https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/blob/master/GutenBurgReader/reader_v2.js 
+
+The small fixer can be found here: https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/blob/master/GertenBergTheGame/fixer.js
+
+The city scan thread code can be found here: https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/blob/master/GutenBurgReader/cityscan.js
+
+The finished csv files can be found here: https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/tree/master/GertenBergTheGame/csvs_backup
+
+1. Is to read the files.
+2. Deal with the small amount of files that does not have an id or lacking meta data in cache.
 ex. of one of the exeptions
 ```Javascript
 if (filename.indexOf("G-") == 0) {
@@ -25,7 +29,7 @@ if (filename.indexOf("G-") == 0) {
 
     }
 ```
-step 3. the rest gets the same treatment:
+3. The rest gets the same treatment:
 The function below, takes the id of a file, finds the meta data file from the cache folder and extracts the meta data.
 If succesful it will follow the chain succesFunc_meta -> cpQ
 ```Javascript
@@ -63,11 +67,11 @@ fs.readFile("cache/epub/" + id + "/pg" + id + ".rdf", 'utf-8', function (err, me
         })
 
 ```
+4. Send book content to childpool for cityscanning
+5. Append city info to csv/json files
+
 The succesful_meta function appends all the relavant csv/json files with books and authors.
-
 The cpQ function is a two part function with the cp variable being our childpool, a msgqueue for threads.
-
-
 
 ```Javascript (childpool)
 const pool = require('fork-pool');
@@ -148,7 +152,7 @@ mongoimport -u user -p password --db books --collection book --authenticationDat
 mongoimport -u user -p password --db books --collection city --authenticationDatabase admin --file mongo_city.json
 ```
 #### PSQL
-for psql we needed four tables, authors, books, cities and the many to many relation between cities and books.
+For psql we needed four tables, authors, books, cities and the many to many relation between cities and books.
 ```Bash(PSQL)
 create table t_auth(id int primary key,name varchar(250));
 create table t_book(id int primary key,filename varchar(50),auth_ID int references t_auth(id),name varchar(1000),release_date varchar(50));
