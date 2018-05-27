@@ -48,25 +48,25 @@ The mongo database we set up with one db called books where we had collections o
 
 ```json
 book: [{
-    _id: "book1",
-    filename: "10001.txt",
-    title: "Abocolocyntosis",
-    author: "Seneca, Lucius Annaeus",
-    release_date: "2003-11-01"
-    cities: [cityIDs...]
+    "_id": "book1",
+    "filename": "10001.txt",
+    "title": "Abocolocyntosis",
+    "author": "Seneca, Lucius Annaeus",
+    "release_date": "2003-11-01"
+    "cities": [cityIDs...]
 }{...}]
 
 auths: [{
-    _id: "auth0",
-    name: "Jefferson, Thomas"
+    "_id": "auth0",
+    "name": "Jefferson, Thomas"
 }{...}]
 
 city: [{
-    _id: "city122685",
-    name: "London",
-    location: {
-        type: "Point",
-        coordinates: [-84.08326,37.12898]
+    "_id": "city122685",
+    "name": "London",
+    "location": {
+        "type": "Point",
+        "coordinates": [-84.08326,37.12898]
     }
 }{...}]
 ```
