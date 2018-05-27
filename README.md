@@ -225,7 +225,6 @@ For this application we used three different databases to handle our data (Postg
 
 To determine the answer to this question, we designed our benchmark tests to see how fast each database would handle five different calls to each implemented query, with the same five search terms (the queries being: query 1: "Find books that mention city", query 2: "Plot cities mentioned by a book", query 3: "Plot cities mentioned by books written by a given author" and query 4: "List all books that mention cities in the vicinity of a geolocation").
 
-
 For good measure we decided to record benchmarks at two different points in the system, namely at the API level (which is to say that we just call the API and record the time it takes for the response to arrive - similar to if we just used curl) and lastly the frontend level (where we record the time it takes for the frontend from the moment we send the request to the moment rendering of the result is complete).
 
 We conducted the benchmark tests by running each query at each different point five times for the three databases and then calculated the average time it took to complete.
@@ -241,28 +240,19 @@ Bourne, Edward Gaylord, Various, Hodgson, William Hope Goldsmith, Oliver Spears 
 43.4052, 87.1952 (geographical center of asia) - 10, 10 (just a random coordinate) - 53.3439, 23.0622 (geographical center of europe) - 55.682319, 12.563728 (Copenhagen) - 38.883139, -77.016278 (Alexandria in the US) 
 
 ### Test Enviroment
-#### Client
-Test system specs: 
-i7:770k
-
-16 Gb memor
-
-SSD disc
+| Hardware | Client   | Host                                   |
+|----------|----------|----------------------------------------|
+| CPU      | i7:7700k | 1 Virtual CPU (Intel Xeon) 1.8-3.0 GHz |
+| Memory   | 16 GB    | 3 GB                                   |
+| Storage  | SSD disc | SSD disc                               |
 
 Browser for frontend tests: Firefox
 
-#### Host
-3 GB memory
-
-1 virtual CPU (Intel Xeon) ranging from 1.8-3.0 GHz (depending on the mood of digitalocean on that particular time)
-
-SSD disc.
 
 
 ### MongoDB (Mongo)
 
 Lets start with the slowest (as it turns out) of the three databases for this type of operation; MongoDB. 
-
 **type**|**query**|**avg time taken**
 :-----:|:-----:|:-----:
 RestApi|1|1,30 s
@@ -282,7 +272,6 @@ client's own computer.
 ### Postgres (PSQL)
 
 Next up let's take a look at how Postgres did!
-
 **type**|**query**|**avg time taken**
 :-----:|:-----:|:-----:
 RestApi|1|1,04 s
@@ -305,7 +294,6 @@ Again we see the same trend as with Mongo, where the front end takes atleast twi
 ### Neo4J (Neo)
 
 Lastly let's take a look at the results of our Neo benchmarks.
-
 **type**|**query**|**avg time taken**
 :-----:|:-----:|:-----:
 RestApi|1|0,90 s
