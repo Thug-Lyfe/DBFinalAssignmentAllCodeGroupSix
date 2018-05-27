@@ -3,7 +3,8 @@ query 2: get cities from book\
 query 3: get cities and books from author\
 query 4: get books from coordinates\
 
-big table:\
+big table:
+
 **part/qeury/db**|**avg time taken pr. query**|**% diff**
 :-----:|:-----:|:-----:
 Controller,1,Mongo|6,09 s|100,00%
