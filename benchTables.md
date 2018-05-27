@@ -2,7 +2,6 @@ query 1: get books from city\
 query 2: get cities from book\
 query 3: get cities and books from author\
 query 4: get books from coordinates\
-
 # ex 1. big table
 **part/qeury/db**|**avg time taken pr. query**|**% diff**
 :-----:|:-----:|:-----:
@@ -90,7 +89,7 @@ Frontend,4,Psql|2,24 s|86,73%
 4,Neo4j|2,58 s|100,00%
 4,Psql|2,24 s|86,73%
 
-#ex 3. ordered by db
+# ex 3. ordered by db
 ### Mongo
 **part**|**query**|**avg time taken**
 :-----:|:-----:|:-----:
@@ -137,7 +136,7 @@ Frontend|2|1,48 s
 Frontend|3|2,04 s
 Frontend|4|2,58 s
 
-#ex 4. sorted by query
+# ex 4. sorted by query
 ### query 1
 **part**|**db**|**avg time taken**
 :-----:|:-----:|:-----:
