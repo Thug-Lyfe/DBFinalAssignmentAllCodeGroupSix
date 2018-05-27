@@ -22,6 +22,8 @@ During the our application’s design phase we had to make a choice in regards t
 After some pondering we, however, discovered that we have little opportunity to distinguish one Oxford from another, therefore we decided to handle this issue by just returning all the cities that share a name, such that a search for London will return all cities by the that name.
 Below is a screenshot of this decision “in action” - we searched for the book: <i>“Charles I Makers of History”</i> which mention a lot of english city names, but as you can see many former (and present) british dependencies and colonies also has cities named London, Oxford etc. 
 
+![alt text](https://raw.githubusercontent.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/master/pics/frontendScreenShot.PNG "frontend screenshot")
+
 
 
 ## Benchmark Discussion
