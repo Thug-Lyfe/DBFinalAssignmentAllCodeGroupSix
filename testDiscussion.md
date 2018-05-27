@@ -1,7 +1,5 @@
 ## Benchmark Discussion
 
-Behavior of query test set. Including a discussion on how much of the query runtime is influenced by the DB engine and what is influenced by the application frontend.
-
 We used three different databases to handle our data. However one of the databases has to be the fastest for this kind of data but which one?
 To figure this our we did some benchmark tests to see how fast each database would handle five different calls for the queries. We tested three different times, the time it took for the backend controller to execute the query, the time it took for the api to call a rest call on the production server, and how long it took for our application to run the different queries from a user input perspective. The results were rather surprising.
 
