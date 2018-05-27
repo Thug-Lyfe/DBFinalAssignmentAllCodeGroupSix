@@ -10,18 +10,21 @@ Cities:
 3. Oxford
 4. Roskilde
 5. Ushuaia
+
 Books: 
 1. Byron
 2. Denmark
 3. Yeast: a Problem
 4. Phantom Fortune, a Novel
 5. The Gold Diggings of Cape Horn: A Study of Life in Tierra del Fuego and Patagonia
+
 Authors:
 1. Bourne, Edward Gaylord
 2. Various
 3. Hodgson, William Hope
 4. Goldsmith, Oliver
 5. Spears, John Randolph
+
 Coordinates: (latatitude,longitude)
 1. 43.4052, 87.1952 (geographical center of asia)
 2. 10,10
