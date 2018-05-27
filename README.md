@@ -6,7 +6,7 @@
 This markdown file covers our implementation of the Gutenberg project, where we provide users the ability to query a collection 
 of about 35.000 E-books from the Project Gutenberg in a number of interesting ways. 
 
-The repository, in which this resides, is organized in the following way: 
+The repository, in which this markdown file resides, is organized in the following way: 
 
 | file name         | Description |
 |-------------------|-------------|
