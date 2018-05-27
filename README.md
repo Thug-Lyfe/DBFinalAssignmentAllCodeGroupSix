@@ -10,10 +10,10 @@ The repository, in which this markdown file resides, is organized in the followi
 
 | file name         | Description |
 |-------------------|-------------|
-| GertenBergTheGame | A how to setup of all three databases, with data files to initate |
-| GutenBergBackend  | A repository containing our backend |
-| GutenBorgFrontend | A repository containing our frontend |
-| GutenBurgReader   | A repository with the js script that extract data from books |
+| [GertenBergTheGame](https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/tree/master/GertenBergTheGame) | A how to setup of all three databases, with data files to initate |
+| [GutenBergBackend](https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/tree/master/GutenBergBackend)  | A repository containing our backend |
+| [GutenBorgFrontend](https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/tree/master/GutenBorgFrontend)  | A repository containing our frontend |
+| [GutenBurgReader](https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/tree/master/GutenBurgReader)   | A repository with the js script that extract data from books |
 | The live frontend | http://167.99.237.199/  |
 
 Regards: Marco Blum, David Blum, Alexandar Kraunsøe & Kasper Pagh
