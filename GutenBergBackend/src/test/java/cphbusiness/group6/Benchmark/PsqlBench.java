@@ -47,7 +47,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class PsqlBench {
-/*
+
     static PSQLConnector monCon = null;
     static PSQLController yatzi = null;
     static WebDriver driver;
@@ -610,5 +610,5 @@ public class PsqlBench {
             return true;
         });
         System.out.println(System.currentTimeMillis() - now);
-    }*/
+    }
 }

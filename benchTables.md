@@ -3,8 +3,7 @@ query 2: get cities from book\
 query 3: get cities and books from author\
 query 4: get books from coordinates\
 
-big table:
-
+# ex 1. big table
 **part/qeury/db**|**avg time taken pr. query**|**% diff**
 :-----:|:-----:|:-----:
 Controller,1,Mongo|6,09 s|100,00%
@@ -44,7 +43,7 @@ Frontend,4,Mongo|2,24 s|86,99%
 Frontend,4,Neo4j|2,58 s|100,00%
 Frontend,4,Psql|2,24 s|86,73%
 
-3 smaller tables ordered by part
+# ex 2. 3 smaller tables ordered by part
 ### Controller
 **qeury/db**|**avg time taken pr. query**|**% diff**
 :-----:|:-----:|:-----:
@@ -90,3 +89,50 @@ Frontend,4,Psql|2,24 s|86,73%
 4,Mongo|2,24 s|86,99%
 4,Neo4j|2,58 s|100,00%
 4,Psql|2,24 s|86,73%
+
+#ex 3. ordered by db
+### Mongo
+**part**|**query**|**avg time taken**
+:-----:|:-----:|:-----:
+Controller|1|6,09 s
+Controller|2|1,69 s
+Controller|3|5,34 s
+Controller|4|4,89 s
+RestApi|1|1,30 s
+RestApi|2|0,35 s
+RestApi|3|2,79 s
+RestApi|4|1,38 s
+Frontend|1|3,99 s
+Frontend|2|1,09 s
+Frontend|3|3,95 s
+Frontend|4|2,24 s
+### Psql
+**part**|**query**|**avg time taken**
+:-----:|:-----:|:-----:
+Controller|1|1,59 s
+Controller|2|1,06 s
+Controller|3|1,84 s
+Controller|4|1,43 s
+RestApi|1|1,04 s
+RestApi|2|0,90 s
+RestApi|3|1,16 s
+RestApi|4|0,94 s
+Frontend|1|3,96 s
+Frontend|2|1,83 s
+Frontend|3|1,60 s
+Frontend|4|2,24 s
+### Neo4J
+**part**|**query**|**avg time taken**
+:-----:|:-----:|:-----:
+Controller|1|1,33 s
+Controller|2|0,98 s
+Controller|3|2,33 s
+Controller|4|1,33 s
+RestApi|1|0,90 s
+RestApi|2|0,37 s
+RestApi|3|0,89 s
+RestApi|4|0,99 s
+Frontend|1|3,65 s
+Frontend|2|1,48 s
+Frontend|3|2,04 s
+Frontend|4|2,58 s
