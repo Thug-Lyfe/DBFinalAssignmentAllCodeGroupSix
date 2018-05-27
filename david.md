@@ -82,5 +82,14 @@ For the SQL database we set up as shown in the following ER-Diagram.
 
 In Neo4J we made the database with 3 types of nodes (city, book and author), then we had 2 types of relations (written_by and mentions)
 
+Visually the data would look as below:
 ![alt text](https://raw.githubusercontent.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/master/pics/photo_2018-05-27_18-58-20.jpg "Graph Nodes and Relations")
+
+This can also be seen when we queary through the Neo4J webinterface using the query: 
+```cypher
+MATCH (c:city {name : 'Roskilde'})<-[:Mentions]-(a :book)<-[:Written_by]-(b :author) return distinct a, b, c
+```
+
+Example Data from Neo4j Webinterface:
+![alt text](https://raw.githubusercontent.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/master/pics/photo_2018-05-27_19-09-08.jpg "Example Data from Neo4j Webinterface")
 
