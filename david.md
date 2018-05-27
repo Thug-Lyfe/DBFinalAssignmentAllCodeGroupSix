@@ -75,10 +75,12 @@ city: [{
 
 For the SQL database we set up as shown in the following ER-Diagram.  
 
-![]()
+![alt text](https://raw.githubusercontent.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/master/pics/photo_2018-05-27_18-45-55.jpg "SQL ER-Diagram")
+
 
 ### Neo4J
 
 In Neo4J we made the database with 3 types of nodes (city, book and author), then we had 2 types of relations (written_by and mentions)
 
-![]()
+![alt text](https://raw.githubusercontent.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/master/pics/photo_2018-05-27_18-58-20.jpg "Graph Nodes and Relations")
+
