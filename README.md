@@ -1,11 +1,22 @@
 # TestFinalAssignmentAllCodeGroupSix
 
+
+## Introduction
+
+This markdown file covers our implementation of the Gutenberg project, where we provide users the ability to query a collection 
+of about 35.000 E-books from the Project Gutenberg in a number of interesting ways. 
+
+The repository, in which this resides, is organized in the following way: 
+
 | file name         | Description |
 |-------------------|-------------|
 | GertenBergTheGame | A how to setup of all three databases, with data files to initate |
 | GutenBergBackend  | A repository containing our backend |
 | GutenBorgFrontend | A repository containing our frontend |
 | GutenBurgReader   | A repository with the js script that extract data from books |
+| The live frontend | http://167.99.237.199/  |
+
+Regards: Marco Blum, David Blum, Alexandar Kraunsøe & Kasper Pagh
 
 ## Database Engines
 
