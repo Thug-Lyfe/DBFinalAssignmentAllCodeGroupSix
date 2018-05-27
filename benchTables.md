@@ -185,3 +185,28 @@ Frontend|Psql|2,24 s
 Controller|Neo4J|1,33 s
 RestApi|Neo4J|0,99 s
 Frontend|Neo4J|2,58 s
+
+
+
+# ex. 5 alex tables
+### Mongo
+**query**|**avg api time**|**avg frontend time**|**difference**
+:-----:|:-----:|:-----:|:-----:
+1|1,30 s|3,99 s|306,75%
+2|0,35 s|1,09 s|307,33%
+3|2,79 s|3,95 s|141,76%
+4|1,38 s|2,24 s|162,57%
+### Psql
+**query**|**avg api time**|**avg frontend time**|**difference**
+:-----:|:-----:|:-----:|:-----:
+1|1,04 s|3,96 s|382,72%
+2|0,90 s|1,83 s|202,90%
+3|1,16 s|1,60 s|138,11%
+4|0,94 s|2,24 s|237,18%
+### Neo4J
+**query**|**avg api time**|**avg frontend time**|**difference**
+:-----:|:-----:|:-----:|:-----:
+1|0,90 s|3,65 s|404,57%
+2|0,37 s|1,48 s|400,05%
+3|0,89 s|2,04 s|230,20%
+4|0,99 s|2,58 s|259,28%
