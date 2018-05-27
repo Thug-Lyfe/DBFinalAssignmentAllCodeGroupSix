@@ -4,7 +4,7 @@
 ## Introduction
 
 This markdown file covers our implementation of the Gutenberg application, where we provide users the ability to query a database 
-of about 35.000 E-books from the Project Gutenberg in a number of interesting ways. 
+of about 37.000 E-books from the Project Gutenberg in a number of interesting ways. 
 
 The repository, in which this markdown file resides, is organized in the following way: 
 
