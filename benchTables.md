@@ -136,3 +136,53 @@ Frontend|1|3,65 s
 Frontend|2|1,48 s
 Frontend|3|2,04 s
 Frontend|4|2,58 s
+
+#ex 4. sorted by query
+### query 1
+**part**|**db**|**avg time taken**
+:-----:|:-----:|:-----:
+Controller|Mongodb|6,09 s
+RestApi|Mongodb|1,30 s
+Frontend|Mongodb|3,99 s
+Controller|Psql|1,59 s
+RestApi|Psql|1,04 s
+Frontend|Psql|3,96 s
+Controller|Neo4J|1,33 s
+RestApi|Neo4J|0,90 s
+Frontend|Neo4J|3,65 s
+### query 2
+**part**|**db**|**avg time taken**
+:-----:|:-----:|:-----:
+Controller|Mongodb|1,69 s
+RestApi|Mongodb|0,35 s
+Frontend|Mongodb|1,09 s
+Controller|Psql|1,06 s
+RestApi|Psql|0,90 s
+Frontend|Psql|1,83 s
+Controller|Neo4J|0,98 s
+RestApi|Neo4J|0,37 s
+Frontend|Neo4J|1,48 s
+### query 3
+**part**|**db**|**avg time taken**
+:-----:|:-----:|:-----:
+Controller|Mongodb|5,34 s
+RestApi|Mongodb|2,79 s
+Frontend|Mongodb|3,95 s
+Controller|Psql|1,84 s
+RestApi|Psql|1,16 s
+Frontend|Psql|1,60 s
+Controller|Neo4J|2,33 s
+RestApi|Neo4J|0,89 s
+Frontend|Neo4J|2,04 s
+### query 4
+**part**|**db**|**avg time taken**
+:-----:|:-----:|:-----:
+Controller|Mongodb|4,89 s
+RestApi|Mongodb|1,38 s
+Frontend|Mongodb|2,24 s
+Controller|Psql|1,43 s
+RestApi|Psql|0,94 s
+Frontend|Psql|2,24 s
+Controller|Neo4J|1,33 s
+RestApi|Neo4J|0,99 s
+Frontend|Neo4J|2,58 s
