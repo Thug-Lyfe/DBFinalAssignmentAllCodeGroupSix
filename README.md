@@ -325,9 +325,11 @@ For good measure we decided to record benchmarks at two different points in the 
 We conducted the benchmark tests by running each query at each different point five times for the three databases and then calculated the average time it took to complete.
 
 ### Search Terms
-| Cities | Copenhagen, London, Oxford, Roskilde & Ushuaia |
-| Book Titles | Byron, Denmark, Yeast: a Problem, Phantom Fortune, a Novel & The Gold Diggings of Cape Horn: A Study of Life in Tierra del Fuego and Patagonia |
-| Authors  | Bourne, Edward Gaylord, Various, Hodgson, William Hope Goldsmith, Oliver Spears & John Randolph |
+| Entity                    | Value                                                                                                                                                                                                                    |
+|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cities                    | Copenhagen, London, Oxford, Roskilde & Ushuaia                                                                                                                                                                           |
+| Book Titles               | Byron, Denmark, Yeast: a Problem, Phantom Fortune, a Novel & The Gold Diggings of Cape Horn: A Study of Life in Tierra del Fuego and Patagonia                                                                           |
+| Authors                   | Bourne, Edward Gaylord, Various, Hodgson, William Hope Goldsmith, Oliver Spears & John Randolph                                                                                                                          |
 | Coordinates(geolocations) | 43.4052, 87.1952 (geographical center of asia) - 10, 10 (just a random coordinate) - 53.3439, 23.0622 (geographical center of europe) - 55.682319, 12.563728 (Copenhagen) - 38.883139, -77.016278 (Alexandria in the US) |
 
 ### Test Enviroment
