@@ -31,5 +31,6 @@ Now lets look at the last of the three databases Neo4j.
 
 ![alt text](https://github.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/blob/master/pics/Neo4jBench.png "Neo4j Benchmark")
 
+
 Neo4j had very similar times to psql for every single query. Both the frontend and api calls were within a second of each other between these 2 databases. However neo4j is slightly faster on average than psql. The larger the data sent the bigger the difference in the two databases speeds is apparent.
 From our results though we can't make a clear distinction as to which database is the absolute best however the worst is very apparent. If we were to chose a best database though for this kindof data take both the benchmark tests as well as how easy the queries are to write, then neo4j wins by a landslide.
