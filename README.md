@@ -26,7 +26,7 @@ For SQL we ran PostgreSQL as that is what we have worked with during the semeste
 For NoSQL we ran MongoDB, which we had also covered during this semester as well as previous semesters. \
 For the graph database we ran Neo4J, which we had been introduced to this semester.
 
-Each of our databases are hosted on the production server in each their own docker images. We started them with the following docker commands:   
+Each of our databases are hosted on the production server in each their own docker containers. We started them with the following docker commands:   
 
 ```bash
 docker run -d
