@@ -2,6 +2,34 @@ query 1: get books from city\
 query 2: get cities from book\
 query 3: get cities and books from author\
 query 4: get books from coordinates\
+
+Things used in queries:
+Cities: 
+1. Copenhagen
+2. London
+3. Oxford
+4. Roskilde
+5. Ushuaia
+Books: 
+1. Byron
+2. Denmark
+3. Yeast: a Problem
+4. Phantom Fortune, a Novel
+5. The Gold Diggings of Cape Horn: A Study of Life in Tierra del Fuego and Patagonia
+Authors:
+1. Bourne, Edward Gaylord
+2. Various
+3. Hodgson, William Hope
+4. Goldsmith, Oliver
+5. Spears, John Randolph
+Coordinates: (latatitude,longitude)
+1. 43.4052, 87.1952 (geographical center of asia)
+2. 10,10
+3. 53.3439, 23.0622 (geographical center of europe)
+4. 55.682319, 12.563728 (Copenhagen)
+5. 38.883139, -77.016278 (Alexandria in the US)
+
+
 # ex 1. big table
 **part/qeury/db**|**avg time taken pr. query**|**% diff**
 :-----:|:-----:|:-----:
