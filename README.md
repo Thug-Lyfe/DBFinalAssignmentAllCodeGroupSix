@@ -217,6 +217,9 @@ neo4j-admin import \
     --id-type=STRING
 neo4j start
 ```
+Note: We found out later that we had switched the relation between cities and books.\
+Making the relation author - [writtem_by] -> book\
+Which just looks silly but it has the same functionality, so we didn't see a reason to change it.
 
 
 ## Benchmark Discussion
