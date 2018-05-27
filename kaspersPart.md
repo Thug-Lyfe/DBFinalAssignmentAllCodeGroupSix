@@ -12,8 +12,7 @@ This ended up in a class design that looks like this:
 
 ![alt text](https://raw.githubusercontent.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/master/pics/classDiagramEntities.png "Class diagram")
 
-The specific reason why we chose to operate with just these four entities has to do with the problem/assignment we were asked to solve
-- namely that the end user functionality we needed to provide concerns itself only with one or more of the above, nothing else.
+The specific reason why we chose to operate with just these four entities has to do with the problem/assignment we were asked to solve, namely that the end user functionality we needed to provide concerns itself only with one or more of the above, nothing else.
 
 ## Business Logic
 
