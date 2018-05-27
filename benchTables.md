@@ -3,7 +3,7 @@ query 2: get cities from book\
 query 3: get cities and books from author\
 query 4: get books from coordinates\
 
-Things used in queries:
+Things used in queries:\
 Cities: 
 1. Copenhagen
 2. London
