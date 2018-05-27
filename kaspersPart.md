@@ -49,12 +49,20 @@ Bourne, Edward Gaylord, Various, Hodgson, William Hope Goldsmith, Oliver Spears 
 
 ### Test Enviroment
 #### Client
-Test system specs: i7:770k, 16 Gb memor, SSD disc
+Test system specs: 
+i7:770k
+
+16 Gb memor
+
+SSD disc
+
 Browser for frontend tests: Firefox
 
 #### Host
 3 GB memory
+
 1 virtual CPU (Intel Xeon) ranging from 1.8-3.0 GHz (depending on the mood of digitalocean on that particular time)
+
 SSD disc.
 
 
