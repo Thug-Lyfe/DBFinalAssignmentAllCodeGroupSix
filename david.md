@@ -46,7 +46,7 @@ For the PostgreSQL database we setup the auth user in the user table.
 
 The mongo database we set up with one db called books where we had collections of books, cities and authors. The collections where structured as follows:
 
-```json error=TRUE
+```{json error=TRUE}
 book: [{
     "_id": "book1",
     "filename": "10001.txt",
