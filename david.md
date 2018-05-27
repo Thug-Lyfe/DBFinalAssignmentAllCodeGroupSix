@@ -91,5 +91,6 @@ MATCH (c:city {name : 'Roskilde'})<-[:Mentions]-(a :book)<-[:Written_by]-(b :aut
 ```
 
 Example Data from Neo4j Webinterface:
+
 ![alt text](https://raw.githubusercontent.com/Thug-Lyfe/DBFinalAssignmentAllCodeGroupSix/master/pics/photo_2018-05-27_19-09-08.jpg "Example Data from Neo4j Webinterface")
 
